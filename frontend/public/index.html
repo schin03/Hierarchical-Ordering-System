@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>310 Frontend</title>
+		<link href="/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class = "container">
+			<div class = "sidebar">
+				<a href = "index.html"> Course Explorer </a>
+				<a href = "campus-explorer.html"> Campus Explorer </a>
+				<a href = "insight1.html"> Insight 1 </a>
+				<a href = "insight2.html"> Insight 2 </a>
+				<a href = "insight3.html"> Insight 3 </a>
+			</div>
+		</div>
+
+		<div class = "content">
+			<h1>Course Explorer</h1>
+
+			<!-- Upload -->
+			<div id="upload-section">
+				<input type="file" id="zipFileCourse" accept=".zip" />
+				<button id="uploadBtnCourse">Upload ZIP</button>
+				<span id="spinner" class="spinner hidden"></span>
+				<p id="message"></p>
+			</div>
+
+			<!-- Filters -->
+			<div id="filter-section">
+				<h3>Filters</h3>
+				<label
+					>Departments:
+					<select id="filterDept" multiple size="3"></select
+				></label>
+				<label
+					>Year Min:
+					<input type="number" id="filterYearMin" placeholder="e.g. 2010" />
+				</label>
+				<label
+					>Year Max:
+					<input type="number" id="filterYearMax" placeholder="e.g. 2020" />
+				</label>
+				<label
+					>Instructor:
+					<input type="text" id="filterInstructor" placeholder="Instructor name" />
+				</label>
+				<button id="filterBtn">Apply Filters</button>
+			</div>
+
+			<!-- Data Table -->
+			<table id="dataTable">
+				<thead>
+					<tr>
+						<th data-column="dept" class="sortable">Dept</th>
+						<th data-column="code" class="sortable">Code</th>
+						<th data-column="title" class="sortable">Title</th>
+						<th data-column="year" class="sortable">Year</th>
+						<th data-column="instructor" class="sortable">Instructor</th>
+						<th data-column="avg" class="sortable">Avg</th>
+
+					</tr>
+				</thead>
+				<tbody id="dataTableBody"></tbody>
+			</table>
+		</div>
+		<script src="frontend.js"></script>
+	</body>
+</html>

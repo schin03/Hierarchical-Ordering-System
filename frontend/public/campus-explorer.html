@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Campus Explorer</title>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<link href="/style.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="sidebar">
+				<a href="index.html"> Course Explorer </a>
+				<a href="campus-explorer.html"> Campus Explorer </a>
+				<a href="insight1.html"> Insight 1 </a>
+				<a href="insight2.html"> Insight 2 </a>
+				<a href="insight3.html"> Insight 3 </a>
+			</div>
+		</div>
+
+		<div class="content">
+			<h1>Campus Explorer</h1>
+
+			<!-- Upload -->
+			<div id="upload-section">
+				<input type="file" id="zipFileCampus" accept=".zip" />
+				<button id="uploadBtnCampus">Upload ZIP</button>
+				<span id="spinner" class="spinner hidden"></span>
+				<p id="message"></p>
+			</div>
+
+			<!-- Filters -->
+			<div id="filter-section">
+				<h3>Filters</h3>
+				<label
+					>Buildings:
+					<select id="filterBuilding" multiple size="3"></select
+				></label>
+				<label
+					>Seat Min:
+					<input type="number" id="filterYearMin" placeholder="e.g. 10" />
+				</label>
+				<label
+					>Seat Max:
+					<input type="number" id="filterYearMax" placeholder="e.g. 300" />
+				</label>
+
+				<button id="filterBtn">Apply Filters</button>
+			</div>
+
+			<!-- Data Table -->
+			<table id="dataTable">
+				<thead>
+					<tr>
+						<th data-column="name" class="sortable">Building</th>
+						<th data-column="address" class="sortable">Address</th>
+						<th data-column="number" class="sortable">Room Number</th>
+						<th data-column="type" class="sortable">Type</th>
+						<th data-column="seats" class="sortable">Seats</th>
+					</tr>
+				</thead>
+				<tbody id="dataTableBody"></tbody>
+			</table>
+		</div>
+		<script src = "frontendCampus.js"></script>
+	</body>
+</html>

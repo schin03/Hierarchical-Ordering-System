@@ -1,0 +1,127 @@
+body {
+	font-family: Arial, sans-serif;
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+h1 {
+	margin-bottom: 10px;
+}
+
+.container {
+	display: flex;
+}
+
+.sidebar {
+	width: 220px;
+}
+
+.content {
+	flex: 1;
+}
+
+
+#upload-section {
+	margin-bottom: 16px;
+}
+
+#message {
+	color: #333;
+	font-weight: bold;
+	margin-top: 8px;
+}
+
+#filter-section {
+	margin-bottom: 16px;
+}
+
+#filter-section input {
+	padding: 6px 8px;
+	margin-right: 8px;
+	width: 200px;
+}
+
+#filter-section button {
+	padding: 6px 12px;
+}
+
+table#dataTable {
+	border-collapse: collapse;
+	width: 100%;
+	margin-top: 1em;
+}
+table#dataTable th,
+table#dataTable td {
+	border: 1px solid #aaa;
+	padding: 8px 12px;
+	text-align: left;
+}
+table#dataTable th {
+	background: #f2f2f2;
+	font-weight: bold;
+}
+table#dataTable tbody tr:nth-child(even) {
+	background: #fafafa;
+}
+table#dataTable tbody tr:hover {
+	background: #e6f7ff;
+}
+
+/* Spinner */
+.spinner {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border: 3px solid #ccc;
+	border-top-color: #333;
+	border-radius: 50%;
+	animation: spin 1s linear infinite;
+	margin-left: 10px;
+	vertical-align: middle;
+}
+.spinner.hidden {
+	display: none;
+}
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* Sortable headers */
+th.sortable {
+	cursor: pointer;
+	user-select: none;
+}
+th.sortable:hover {
+	background: #ddd;
+}
+th.sortable.asc::after {
+	content: " ▲";
+}
+th.sortable.desc::after {
+	content: " ▼";
+}
+
+/* Filter section layout */
+#filter-section label {
+	display: inline-block;
+	margin-right: 12px;
+	margin-bottom: 8px;
+}
+#filter-section select {
+	vertical-align: top;
+	min-width: 120px;
+}
+#filter-section input[type="number"] {
+	width: 80px;
+}
+
+/* Error/success messages */
+#message.error {
+	color: #c00;
+}
+#message.success {
+	color: #080;
+}

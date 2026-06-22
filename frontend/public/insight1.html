@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Insight 1 – Course Averages</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<link href="/style.css" rel="stylesheet" />
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+	<div class = "container">
+		<div class = "sidebar">
+			<a href = "index.html"> Course Explorer </a>
+			<a href = "campus-explorer.html"> Campus Explorer </a>
+			<a href = "insight1.html"> Insight 1 </a>
+			<a href = "insight2.html"> Insight 2 </a>
+			<a href = "insight3.html"> Insight 3 </a>
+		</div>
+	</div>
+
+	<div class = "content">
+		<h1> Course Averages by Department </h1>
+		<p>Filter by department and year level to see how courses' averages compare.</p>
+		<!-- Filters -->
+			<div id="filter-section">
+				<h3>Filters</h3>
+				<label
+					>Department:
+					<select id="filterDept"></select
+				></label>
+				<fieldset id="filterYearLevel">
+					<legend>Course Level:</legend>
+					<label><input type="checkbox" value="1"> 100-level</label>
+					<label><input type="checkbox" value="2"> 200-level</label>
+					<label><input type="checkbox" value="3"> 300-level</label>
+					<label><input type="checkbox" value="4"> 400-level</label>
+				</fieldset>
+				<button id="filterBtn">Apply Filters</button>
+			</div>
+
+		<div style="width: 900px;">
+			<canvas id="insight1_chart" width="800" height="400"></canvas>
+		</div>
+	</div>
+	<script src="insight1.js"></script>
+</body>
+</html>

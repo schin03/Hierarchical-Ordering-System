@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Insight 2</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<link href="/style.css" rel="stylesheet" />
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+	<div class = "container">
+		<div class = "sidebar">
+			<a href = "index.html"> Course Explorer </a>
+			<a href = "campus-explorer.html"> Campus Explorer </a>
+			<a href = "insight1.html"> Insight 1 </a>
+			<a href = "insight2.html"> Insight 2 </a>
+			<a href = "insight3.html"> Insight 3 </a>
+		</div>
+	</div>
+
+	<div class = "content">
+		<h1> Insight 2 </h1>
+		<!-- Filters -->
+			<div id="filter-section">
+				<h3>Filters</h3>
+				<label
+					>Buildings:
+					<select id="filterBuilding" multiple size="3"></select
+				></label>
+				<fieldset id="filterRoomType">
+					<legend>Room Type:</legend>
+					<label><input type="checkbox" value="Tiered Large Group"> Tiered Large Group</label>
+					<label><input type="checkbox" value="Small Group"> Small Group</label>
+					<label><input type="checkbox" value="Open Design General Purpose"> Open Design General Purpose</label>
+					<label><input type="checkbox" value="Case Style"> Case Style</label>
+					<label><input type="checkbox" value="Active Learning"> Active Learning</label>
+				</fieldset>
+				
+			</div>
+
+
+		<div style="width: 900px;">
+			<canvas id="insight2_chart" width="800" height="400"></canvas>
+		</div>
+
+
+	</div>
+	<script src="insight2.js"></script>
+</body>
+</html>
